@@ -9,13 +9,13 @@ terraform {
   }
   # Run init/plan/apply with "backend" commented-out (ueses local backend) to provision Resources (Bucket, Table)
   # Then uncomment "backend" and run init, apply after Resources have been created (uses AWS)
-  backend "s3" {
-    bucket              = "git-workflows-tf-state"
-    key                 = "tf-infra/terraform.tfstate"
-    region              = "eu-west-2"
-    dynamodb_table      = "terraform-state-locking"
-    encrypt             = true
-  }
+  #backend "s3" {
+  #  bucket              = "git-workflows-tf-state"
+  #  key                 = "tf-infra/terraform.tfstate"
+  #  region              = "eu-west-2"
+  #  dynamodb_table      = "terraform-state-locking"
+  #  encrypt             = true
+  #}
 
 }
 
