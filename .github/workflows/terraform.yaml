@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - master
-
+ env:
+      TF_VAR_db_username: ${{ secrets.db_username }}
+      TF_VAR_db_password: ${{ secrets.db_user_password }}
+      
 jobs:
   terraform:
     name: "Terraform"
